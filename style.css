@@ -1,0 +1,590 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/*==============
+    Cabeçalho
+==================*/
+
+header{
+    background-color: green;
+    padding: 0.1px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+.cabecalho{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+.logo{
+    width: 180px;
+    height: auto;
+}
+
+/*========================
+    Opções no cabeçalho/menu
+==========================*/
+nav a{
+    color: white;
+    font-size: 25px;
+}
+
+.menu{
+    display: flex;
+    gap: 30px;
+    margin-left: 40px;
+}
+
+.menu .a{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*=============================
+    Seta para voltar ao topo
+    ============================*/
+.voltar-topo {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: green;
+    color: white;
+    border-radius: 50%;
+
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+
+    z-index: 1000;
+}
+
+.voltar-topo:hover {
+    background-color: #145c2b;
+}
+
+/**/
+#Inicio{
+    background-color: rgb(135, 184, 73);
+}
+/*===========================
+    Cor de fundo do final
+=============================*/
+#fim{
+    background-color: rgb(23, 43, 23);
+    padding: 30px;
+}
+
+/*=================
+    Apresentação
+====================*/
+.apresentacao{
+    margin-bottom: 80px;
+    font-weight: bold;
+}
+
+.apresentacao h2{
+    text-align: center;
+    font-weight: bold;
+}
+
+/*===========
+    Título
+=============*/
+.titulo{
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 1.5px #176b32;
+}
+/*==========================
+    Quebra linha do título
+==============================*/
+.quebra-mobile-inicio{
+    display: none;
+}
+
+/*===========
+    SubTítulo
+=============*/
+
+.subt{
+    text-align: center;
+}
+
+/*==========================
+    Descrevendo o caminhão
+    e o local de trabalho
+============================*/
+
+.slide {
+    display: none;
+}
+
+.slide.ativo {
+    display: block;
+}
+
+.slide > img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.descricao {
+    padding: 10px;
+}
+
+.descricao h2 {
+    color: green;
+    -webkit-text-stroke: 1px #124A25;
+}
+
+.descricao h3 {
+    font-size: 25px;
+}
+.descricao img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.descricao h2{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.descricao h3{
+    font-weight: bold;
+    font-size: 25px;
+}
+/*=========================
+    Imagens abaixo
+    do caminhão e do galpão
+=============================*/
+.img{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.f-mat{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    justify-content: center;
+    align-items: start;
+    gap: 15px;
+}
+
+.foto {
+    min-width: 0;
+    text-align: center;
+}
+
+.f-mat img{
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.f-mat p{
+    margin-top: 8px;
+    font-size: 15px;
+    line-height: 1.4;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+/*==========================
+    Carrossel de materiais
+============================*/
+
+/* Carrossel de materiais recicláveis */
+
+.carrossel {
+    max-width: 750px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.carrossel-materiais {
+    width: min(100% - 32px, 1200px);
+    margin: 30px auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    cursor: grab;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+    user-select: none;
+    touch-action: pan-x pan-y;
+}
+
+.carrossel-materiais.arrastando {
+    cursor: grabbing;
+    scroll-snap-type: none;
+}
+
+.trilho-materiais {
+    display: flex;
+    align-items: stretch;
+    gap: 24px;
+    padding: 12px 4px 22px;
+    width: max-content;
+}
+
+/*==============
+    Materiais
+    coletados
+================*/
+
+.materiais{
+    margin-top: 250px;
+}
+
+.materiais h2{
+    font-size: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 1.5px #124A25;
+    
+}
+.lista-materiais{
+    border: 2px solid green;
+    padding: 3px;
+   background-color: green;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+.material{
+    text-align: center;
+    width: 245px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.material span{
+    display: block;
+    font-size: 45px;
+
+    border: 1px solid hwb(0,255,0);
+    padding: 8px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: rgb(0,255,0);
+}
+.material p{
+    font-size: 25px;
+    margin-top: 30px;
+    margin-top: 10px;
+}
+
+/*==========================
+    Como podemos ajudar ?
+============================*/
+
+.ajuda{
+    text-align: center;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.ajuda h2{
+    font-size: 40px;
+}
+.ajuda .aj{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.ajuda img{
+    height: 500px;
+    width: 1000px;
+}
+
+.destaque{
+    border: 2px solid green;
+    padding: 8px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: green;
+}
+
+/*==========================
+    Quebra linha ajuda
+==============================*/
+.quebra-mobile{
+    display: none;
+}
+
+/* Ajustes para telas de celular */
+@media (max-width: 600px) {
+
+    .quebra-mobile-inicio{
+        display: inline;
+    }
+
+    .carrossel-materiais {
+        width: calc(100% - 12px);
+    }
+
+    .trilho-materiais {
+        gap: 12px;
+    }
+
+    .cartao-material {
+        flex-basis: 82vw;
+        width: 82vw;
+    }
+
+    .cartao-material img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;    
+    }
+
+    .carrossel-materiais .foto {
+        flex: 0 0 88vw;
+        width: 88vw;
+        min-width: 0;
+    
+    }
+
+    .carrossel-materiais .foto picture {
+        display: block;
+        width: 100%;
+    }
+
+    .carrossel-materiais .foto img {
+        display: block;
+        width: 100%;
+        height: calc(100% * 200%);
+        object-fit: contain;
+    }
+
+        /* CABEÇALHO */
+        .cabecalho {
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .logo {
+            width: 100px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px 12px;
+            margin-left: 0;
+            width: 100%;
+        }
+
+        .menu a {
+            font-size: 25px;
+            padding: 4px 0;
+        }
+
+        /* TÍTULOS */
+        .apresentacao {
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+        
+        .titulo {
+            font-size: 25px;
+            line-height: 1.3;
+            padding: 0 10px;
+            
+        }
+
+        .subt {
+            font-size: 25px;
+            line-height: 1.4;
+            padding: 0 12px;
+        }
+
+        /* ESPAÇAMENTO DA APRESENTAÇÃO */
+        
+        /* CARROSSEL E FOTOS */
+        .carrossel {
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+            padding: 0 12px;
+            margin: 25px auto;
+        }
+
+        .f-mat {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .foto {
+            width: 100%;
+        }
+
+        .foto p {
+            font-size: 13px;
+        }
+        .foto img {
+            height: 140px;
+        }
+
+        .f-mat img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+        }
+
+        .f-mat p{
+            font-size: 20px;
+        }
+
+        .descricao img {
+            width: calc(50% - 6px);
+            height: 140px;
+            object-fit: cover;
+        }
+
+        .descricao h2 {
+            font-size: 35px;
+            line-height: 1.35;
+        }
+
+        .descricao h3{
+            font-size: 30px;
+            line-height: 1.35;
+        }
+
+        .descricao p {
+            font-size: 25px;
+            line-height: 1.5;
+        }
+
+        /* MATERIAIS COLETADOS */
+        .materiais {
+            margin-top: 60px;
+            padding: 0;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        .materiais h2 {
+            font-size: 35px;
+            line-height: 1.3;
+            margin-bottom: 20px;
+        }
+
+        .lista-materiais {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            padding: 12px;
+            box-sizing: border-box;
+            width: 100%;
+            margin: 0;
+            border-radius: 0;
+        }
+
+        .lista-materiais .material:last-child {
+            grid-column: 1 / -1;
+            justify-self: center;
+            width: 50%;
+        }
+
+        .material {
+            width: auto;
+            min-width: 0;
+            overflow-wrap: anywhere;
+        }
+
+        .material span {
+            font-size: 55px;
+        }
+
+        .material p {
+            font-size: 25px;
+            margin: 8px 0;
+        }
+
+        /* COMO EU POSSO AJUDAR */
+        #fim {
+            padding: 20px 12px;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        .ajuda h2 {
+            font-size: 30px;
+            line-height: 1.5;
+            margin: 15px 0 25px;
+            padding: 0 4px;
+        }
+
+        .ajuda h2 .quebra-mobile{
+            display: inline; 
+        }
+
+        .destaque {
+            display: inline;
+            padding: 4px;
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+        }
+
+        .ajuda .aj {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .ajuda img {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            box-sizing: border-box;
+            margin: 0 auto 20px;
+        }
+}
+
+@media (max-width: 360px) {
+    .quebra-mobile{
+        display: inline;
+    }
+    .ajuda h2 .destaque {
+        display: inline-block;
+        max-width: 180px;
+        white-space: normal;
+    }
+}
